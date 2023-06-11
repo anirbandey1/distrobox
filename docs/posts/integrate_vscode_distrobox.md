@@ -68,7 +68,7 @@ so many thanks to @owtaylor for the heavy lifting!
 
 ### Second step, extensions
 
-Now we want to install VSCode [Remote Container extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
+Now we want to install VSCode [Dev Containers extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
 
 ![image](https://user-images.githubusercontent.com/598882/149207447-76a82e91-dd3f-43fa-8c52-9c2e85ae8fee.png)
 
@@ -119,8 +119,8 @@ each Distrobox we choose to integrate with VSCode:
   "name" : // PUT YOUR DISTROBOX NAME HERE
   "remoteUser": "${localEnv:USER}",
   "settings": {
-    "remote.containers.copyGitConfig": false,
-    "remote.containers.gitCredentialHelperConfigLocation": "none",
+    "dev.containers.copyGitConfig": false,
+    "dev.containers.gitCredentialHelperConfigLocation": "none",
     "terminal.integrated.profiles.linux": {
       "shell": {
         "path": "${localEnv:SHELL}",

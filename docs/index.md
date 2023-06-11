@@ -1,18 +1,10 @@
-![distrobox-logo](./assets/page-logo-dark.svg#gh-dark-mode-only)
-![distrobox-logo](./assets/page-logo-light.svg#gh-light-mode-only)
-
-<sub>previous logo credits [j4ckr3d](https://github.com/j4ckr3d)  
-current logo credits [David Lapshin](https://github.com/daudix-UFO)<sub>
-
-# Distrobox
-
-![Lint](https://github.com/89luca89/distrobox/actions/workflows/main.yml/badge.svg)
-[![CI](https://github.com/89luca89/distrobox/actions/workflows/compatibility.yml/badge.svg)](https://github.com/89luca89/distrobox/actions/workflows/compatibility.yml)
-[![GitHub](https://img.shields.io/github/license/89luca89/distrobox?color=blue)](../COPYING.md)
-[![GitHub release (latest by date)](https://img.shields.io/github/v/release/89luca89/distrobox)](https://github.com/89luca89/distrobox/releases/latest)
-[![Packaging status](https://repology.org/badge/tiny-repos/distrobox.svg)](https://repology.org/project/distrobox/versions)
-[![Github issue needs help](https://img.shields.io/github/issues-raw/89luca89/distrobox/help%20wanted?color=blue&label=Help%20Wanted%20Issues)](https://github.com/89luca89/distrobox/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22)
-[![GitHub issues by-label](https://img.shields.io/github/issues-raw/89luca89/distrobox/bug?color=red&label=Open%20Bug%20Reports)](https://github.com/89luca89/distrobox/issues?q=is%3Aissue+is%3Aopen+label%3A%22bug%22)
+---
+layout: default
+---
+<picture>
+  <source srcset="assets/brand/svg/distrobox-logomark-dark.svg" media="(prefers-color-scheme: dark)">
+  <img src="assets/brand/svg/distrobox-logomark-light.svg">
+</picture>
 
 Use any Linux distribution inside your terminal. Enable both backward and forward
 compatibility with software and freedom to use whatever distribution you’re more
@@ -35,7 +27,7 @@ graphical apps (X11/Wayland), and audio.
 
 ---
 
-- [Distrobox](#distrobox)
+- [Distrobox](index.md)
   - [What it does](#what-it-does)
     - [See it in action](#see-it-in-action)
   - [Why?](#why)
@@ -284,7 +276,7 @@ init_hooks="touch /init-normal"
 [opensuse]
 additional_packages=git vim tmux nodejs
 home=/tmp/home
-image=opensuse/tumbleweed:latest
+image==opensuse/tumbleweed:latest
 init=true
 init_hooks="touch /init-normal"
 pre_init_hooks="touch /pre-init"
@@ -335,7 +327,6 @@ container_name_default="test-name-1"
 container_user_custom_home="$HOME/.local/share/container-home-test"
 container_init_hook="~/.local/distrobox/a_custom_default_init_hook.sh"
 container_pre_init_hook="~/a_custom_default_pre_init_hook.sh"
-container_manager_additional_flags="--env-file /path/to/file --custom-flag"
 non_interactive="1"
 skip_workdir="0"
 ```
@@ -460,6 +451,16 @@ from [HERE](https://github.com/89luca89/distrobox/releases/latest),
 enter the directory and run `./uninstall`, by default it will assume the install
 directory was `/usr/local` if ran as root or `~/.local`,
 you can specify another directory if needed with `./uninstall --prefix ~/.local`
+
+---
+
+[![Lint](https://github.com/89luca89/distrobox/actions/workflows/main.yml/badge.svg)](https://github.com/89luca89/distrobox/actions/workflows/main.yml)
+[![CI](https://github.com/89luca89/distrobox/actions/workflows/compatibility.yml/badge.svg)](https://github.com/89luca89/distrobox/actions/workflows/compatibility.yml)
+[![GitHub](https://img.shields.io/github/license/89luca89/distrobox?color=blue)](../COPYING.md)
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/89luca89/distrobox)](https://github.com/89luca89/distrobox/releases/latest)
+[![Packaging status](https://repology.org/badge/tiny-repos/distrobox.svg)](https://repology.org/project/distrobox/versions)
+[![Github issue needs help](https://img.shields.io/github/issues-raw/89luca89/distrobox/help%20wanted?color=blue&label=Help%20Wanted%20Issues)](https://github.com/89luca89/distrobox/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22)
+[![GitHub issues by-label](https://img.shields.io/github/issues-raw/89luca89/distrobox/bug?color=red&label=Open%20Bug%20Reports)](https://github.com/89luca89/distrobox/issues?q=is%3Aissue+is%3Aopen+label%3A%22bug%22)
 
 ---
 

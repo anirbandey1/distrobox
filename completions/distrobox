@@ -2,6 +2,10 @@
 
 _generate_from_help() {
 	command=$1
+	# if command does not exist, try with `distrobox subcommand`
+	if ! $command --help >/dev/null 2>/dev/null ; then
+		command="$(echo $command | tr '-' ' ')"
+	fi
 
 	local list cur prev totalopts opts diropts
 
@@ -12,7 +16,7 @@ _generate_from_help() {
 	opts="$($command --help | sed 's|^\t||g' | grep '^--' | cut -d':' -f1 | tr '/' ' ' | tr '\n' ' ')"
 	totalopts="$(echo $opts | tr ' ' '|')"
 	diropts="-H|--home|--volume"
-	fileopts="-f|--file"
+	fileopts="--file"
 
 	if [[ ${prev} =~ ${diropts} ]]; then
 		COMPREPLY=($(compgen -d -- ${cur}))

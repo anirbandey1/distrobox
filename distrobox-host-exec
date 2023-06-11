@@ -27,7 +27,7 @@ if [ ! -t 1 ] ||
 	non_interactive=1
 fi
 distrobox_host_exec_default_command="${SHELL:-/bin/sh}"
-host_spawn_version="1.4.1"
+host_spawn_version="1.4.2"
 verbose=0
 version="1.4.2.1"
 
@@ -81,6 +81,7 @@ if [ -z "${host_command}" ]; then
 				;;
 			-V | --version)
 				printf "distrobox: %s\n" "${version}"
+				printf "host-spawn: %s\n" "${host_spawn_version}"
 				exit 0
 				;;
 			-Y | --yes)
